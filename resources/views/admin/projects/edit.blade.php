@@ -4,6 +4,7 @@
 <div class="container mx-auto">
     <h3 class="text-center mb-3">Modifica {{$project->name}}</h3>
     <form class="myform" action="">
+        @csrf
         <div class="row">
             <div class="col-4">
                 <label for="name" class="form-label">Nome progetto</label>
@@ -34,13 +35,13 @@
         <div class="row d-flex justify-content-center mt-3">
             <div class="col-8">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea class="form-control" name="description"  cols="30" placeholder="Inserisci una breve descrizione del progetto">{{$project->description}}"</textarea>
+                <textarea class="form-control" name="description" rows="8" cols="30" placeholder="Inserisci una breve descrizione del progetto">{{$project->description}}"</textarea>
             </div>
 
         </div>
-        <div class="buttons mt-3 d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary ">Aggiungi</button>
-    </div>
+        <div class="buttons mt-3 d-flex justify-content-center gap-2">
+            <button type="submit" class="btn btn-primary ">Aggiungi</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
 
     </form>
 </div>

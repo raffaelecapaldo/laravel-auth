@@ -22,7 +22,10 @@
                     <td>{{$project->name}}</td>
                     <td><img class="preview img-thumbnail" src="{{$project->image_url}}" alt="{{$project->name}}"></td>
                     <td><a href="{{$project->repo_url}}">{{"$project->name Github"}}</a></td>
-                    <td>AZIONI</td>
+                    <td>
+                        <button  class="btn btn-warning "><a class="text-black" href="{{route('admin.projects.edit', $project->slug)}}"><i class="fa-solid fa-pen-to-square"></i></a></button>
+                        <button  class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
                   </tr>
                 @empty
 
