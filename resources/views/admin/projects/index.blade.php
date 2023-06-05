@@ -11,6 +11,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Immagine</th>
+                <th scope="col">URL Repository</th>
                 <th scope="col">Azioni</th>
               </tr>
             </thead>
@@ -20,6 +21,7 @@
                     <th scope="row">{{$project->id}}</th>
                     <td>{{$project->name}}</td>
                     <td><img class="preview img-thumbnail" src="{{$project->image_url}}" alt="{{$project->name}}"></td>
+                    <td><a href="{{$project->repo_url}}">{{"$project->name Github"}}</a></td>
                     <td>AZIONI</td>
                   </tr>
                 @empty

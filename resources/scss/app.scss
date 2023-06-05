@@ -51,8 +51,16 @@
 
 .main-content {
     padding-left:270px;
+    min-height: 100dvh;
+    background-color: #f9fafb;
 }
 
 .preview {
     width: 150px;
+}
+
+.myform {
+    border: 1px solid rgba(0, 0, 0, 0.0625) !important;
+    background-color: #ffffff !important;
+    padding:3rem;
 }
