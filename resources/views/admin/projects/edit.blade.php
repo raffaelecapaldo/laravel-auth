@@ -2,7 +2,7 @@
 @section('title', 'Modifica progetto')
 @section('content')
 <div class="container mx-auto">
-    <h3 class="text-center mb-3">Modifica {{$project->title}}</h3>
+    <h3 class="text-center mb-3">Modifica {{$project->name}}</h3>
     <form class="myform" action="">
         <div class="row">
             <div class="col-4">
