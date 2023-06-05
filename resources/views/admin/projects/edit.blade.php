@@ -35,7 +35,7 @@
         <div class="row d-flex justify-content-center mt-3">
             <div class="col-8">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea class="form-control" name="description" rows="8" cols="30" placeholder="Inserisci una breve descrizione del progetto">{{$project->description}}"</textarea>
+                <textarea class="form-control" id="editor" name="description" rows="8" cols="30" placeholder="Inserisci una breve descrizione del progetto">{{$project->description}}"</textarea>
             </div>
 
         </div>
@@ -45,4 +45,6 @@
 
     </form>
 </div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 @endsection
