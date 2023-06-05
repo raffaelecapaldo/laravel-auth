@@ -35,6 +35,9 @@
             </tbody>
           </table>
     </div>
+    <div class="d-flex">
+        {{ $projects->links() }}
+    </div>
 </div>
 </div>
 @endsection
