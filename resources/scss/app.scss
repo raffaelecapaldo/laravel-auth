@@ -1,1 +1,58 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.sidebar {
+    background-color: #182444;
+    bottom: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 270px;
+    z-index: 1000;
+
+    .sidebar-logo {
+        img {
+            width: 100px;
+        }
+    }
+}
+
+
+.sidebar-inner {
+    height: 100%;
+
+}
+
+.sidebar-menu {
+    ul
+    {
+        margin:0;
+        padding:0;
+        li {
+            list-style: none;
+            &:hover {
+                background-color: #091023;
+            }
+            a {
+                display:block;
+                padding-left:10px;
+                padding:8px 14px;
+                text-decoration: none;
+                font-size: 1.3rem;
+                color:white;
+                &:hover {
+                    color:#acb6c4!important;
+                }
+            }
+
+        }
+    }
+
+}
+
+.main-content {
+    padding-left:270px;
+}
+
+.preview {
+    width: 150px;
+}

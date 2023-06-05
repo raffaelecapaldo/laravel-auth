@@ -16,9 +16,12 @@
 </head>
 
 <body>
-    @yield('content')
+    <main>
+        @include('admin.partials.sidebar')
+        <div class="main-content">
+            @yield('content')
+        </div>
+    </main>
 </body>
 
 </html>
-
-

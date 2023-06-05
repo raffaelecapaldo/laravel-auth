@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Modifica progetto')
+@section('title', 'Aggiungi progetto')
 @section('content')
-Progetto
+Aggiungi
 @endsection
