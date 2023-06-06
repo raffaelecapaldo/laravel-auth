@@ -16,20 +16,26 @@ Anteprima {{$project->name}}
                     <h3>Linguaggi utilizzati</h3>
                     <p>{{$project->languages}}</p>
                 </div>
+                @if ($project->tags)
                 <div class="tags">
                     <h3>Tags associati</h3>
                     <p>{{$project->tags}}</p>
                 </div>
+                @endif
+
+                @if ($project->repo_url)
                 <div class="repo">
                     <div>
                     <h3 class="mb-3">Repository</h3>
                 </div>
                     <a class="text-center button-view" href="{{$project->repo_url}}">Visita</a>
                 </div>
+                @endif
+
               </div>
               <div class="description mt-3">
                 <h3>Descrizione</h3>
-                {{$project->description}}
+                {!! $project->description !!}
               </div>
 
         </div>

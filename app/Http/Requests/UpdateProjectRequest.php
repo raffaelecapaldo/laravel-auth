@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class UpdateProjectRequest extends FormRequest
 {
@@ -13,7 +15,7 @@ class UpdateProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +26,28 @@ class UpdateProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => ['required', 'max:100', Rule::unique('projects')->ignore($this->project)],
+            'image_url' => 'required|url',
+            'languages' => 'required|max:255',
+            'tags' => 'nullable|max:255',
+            'description' => 'required',
+            'repo_url' => 'nullable|url'
+        ];
+    }
+
+    public function messages() {
+        return [
+            'name.required' => 'Il nome del progetto è obbligatorio',
+            'name.max' => 'Il nome non può essere più lungo di :max caratteri',
+            'name.unique' => 'È già presente un progetto con questo nome',
+            'image_url.required' => "L'url dell'immagine è obbligatorio",
+            'image_url.url' => "L'url dell'immagine non è corretto",
+            'tags.max' => 'Il campo tag non può essere più lungo di :max caratteri',
+            'description.required' => 'Una descrizione del progetto è obbligatoria',
+            'repo_url.url' => "L'url della repository non è corretto"
+
+
         ];
     }
 }
+
