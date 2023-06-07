@@ -1,3 +1,4 @@
+@use './partials/variables' as *;
 @import "~bootstrap/scss/bootstrap";
 
 $fa-font-path: "../fonts/webfonts" !default;
@@ -8,7 +9,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 .sidebar {
-    background-color: #182444;
+    background-color: $primarycolor;
     bottom: 0;
     overflow: hidden;
     position: fixed;
@@ -24,7 +25,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 }
 
 .bg-sidebar {
-    background-color: #182444;
+    background-color: $primarycolor;
 
 }
 
@@ -44,7 +45,7 @@ $fa-font-path: "../fonts/webfonts" !default;
         li {
             list-style: none;
             &:hover {
-                background-color: #091023;
+                background-color: $hovercolor;
             }
             a {
                 display: block;
@@ -79,7 +80,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 .button-view {
     padding: 10px 50px;
-    background-color: #0288d1;
+    background-color: $secondarycolor;
     text-decoration: none;
     color: white;
     border-radius: 4px;
